@@ -1,0 +1,12 @@
+C comenzamos...
+P 2048 1 ignora cualquier comentario en la misma linea del comando, como este.
+A 1 1 0
+A 33 1 1
+P 32 2
+A 15 2 0
+A 82 1 0
+P 32 3522
+A 15 3522 0
+L 1
+F
+E
