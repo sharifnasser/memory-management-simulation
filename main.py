@@ -67,9 +67,8 @@ while(op0 != 'E'):
     if op0 == 'P':                      # Operación de asignación de memoria
         op1 = int(line[1])
         op2 = line[2]
-        tamtotal += op1
         
-        if op1 <= 2048 or tamtotal <= 6144:
+        if op1 <= 2048:
             print('Asignar', op1, 'bytes al proceso', op2)
             arrprocess.append(process(op2, op1, 0, 0, 0))
             pag = math.ceil(op1/16)
@@ -116,8 +115,6 @@ while(op0 != 'E'):
                 print('Proceso', op2, 'asignado a [', obj.i, '-', obj.f, '] de la memoria principal. Tam =', pag)
         else:
             print('-ERROR- EL PROCESO ES MUY GRANDE PARA CABER EN MEMORIA O MEMORIA LLENA')
-        if tamtotal > 6144:
-            tamtotal -= op1
         print(mem)
         print(swap)
 
@@ -143,9 +140,8 @@ while(op0 != 'E'):
                     elif obj.sw == 1:
                         swap_n = obj.i
                         swap[(temp*16)+n] = None
-                
                 arrprocess.remove(obj)
-                print('Se libera el proceso', obj.id, )
+                print('Se libera el proceso', obj.id)
 
     if op0 == 'F':                                      # Finalizan las operaciones y se reinicia todo
         print()
