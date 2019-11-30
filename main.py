@@ -2,6 +2,9 @@ import numpy as np
 import math
 import sys
 
+## Proyecto  Final de Sistemas Operativos
+## 2 de diciembre de 2019
+
 class process(object):
     def __init__(self, nombre, size, inicio, final, swap):
         self.id = nombre
